@@ -1,12 +1,10 @@
 <?php
 require_once 'connection.php';
 
-// Eliminăm procedura dacă există
 $sql1 = "DROP PROCEDURE IF EXISTS AdAdept";
 $stmt1 = $con->prepare($sql1);
 $stmt1->execute();
 
-// Cream procedura stocată pentru a adăuga un nou adept
 $sql2 = "CREATE PROCEDURE AdAdept(IN p_nume VARCHAR(255), IN p_prenume VARCHAR(255), IN p_domiciliu VARCHAR(255), IN p_iq INT)
 BEGIN
     INSERT INTO infadepti (nume, prenume, domiciliu, iq) VALUES (p_nume, p_prenume, p_domiciliu, p_iq);
@@ -20,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $domiciliu = $_POST['domiciliu'];
     $iq = $_POST['iq'];
 
-    // Apelăm procedura stocată pentru a adăuga un nou adept
     $sql = 'CALL AdAdept(:nume, :prenume, :domiciliu, :iq)';
     $stmt = $con->prepare($sql);
     $stmt->bindParam(':nume', $nume);
