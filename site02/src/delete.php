@@ -24,7 +24,8 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="delete.php">Sterge membri, dar te rog sa nu</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="login.php">Login</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="upload.php">Upload</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="imag.php">Vezi imagine</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="imag.php">Imaginea incarcata de tine</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="imagini.php">Vezi imagini</a>
                 </div>
             </div>
             <!-- Page content wrapper-->
